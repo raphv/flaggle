@@ -1,0 +1,16 @@
+.guess-letter {
+	width: 1.2em;
+}
+
+.flagboard {
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+
+.flagboard {
+	line-height: 14px;
+}
+
+.flagboard td {
+	padding: 0;
+}
