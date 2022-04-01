@@ -8,10 +8,19 @@
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 
-    <title>Flagwords!</title>
+    <title>🇼🇫🇱🇦🇬🇸 - A game of words and flags</title>
   </head>
   <body>
-    <h1 class="text-center">Flagwords <a href="#help" data-bs-toggle="modal"><img src="fontawesome/question-circle.svg" alt="Help!" width="40"></a></h1>
+    <h1 class="justify-content-center d-flex lh-1 my-2 my-sm-3 my-lg-4">
+      <span>WF</span>
+      <img class="mx-2" src="twemoji/WF.svg" alt="🇼🇫" width="24"></img>
+      <span>la</span>
+      <img class="mx-2" src="twemoji/LA.svg" alt="🇱🇦" width="24"></img>
+      <span>gs</span>
+      <img class="mx-2" src="twemoji/GS.svg" alt="🇬🇸" width="24"></img>
+      <a href="#help" data-bs-toggle="modal">
+        <img src="fontawesome/question-circle.svg" alt="Help!" width="40"></a>
+      </h1>
     <main>
 
       <div class="d-flex align-items-center justify-content-center my-2 my-lg-3" id="line-[LINE]">
@@ -35,17 +44,21 @@
     </main>
 
     <section class="text-center">
-      <button class="btn btn-success me-1 me-sm-2 me-lg-3" disabled id="check-button">
+      <button class="btn btn-success my-1 me-1 me-sm-2 me-lg-3" disabled id="check-button">
         <img src="fontawesome/check.svg" width="20" alt="Check">
         Check line
       </button>
-      <button class="btn btn-danger me-1 me-sm-2 me-lg-3" id="reset-button">
+      <button class="btn btn-danger my-1 me-1 me-sm-2 me-lg-3" id="reset-button">
         <img src="fontawesome/undo.svg" width="20" alt="Reset">
         Reset line
       </button>
-      <button class="btn btn-primary me-1 me-sm-2 me-lg-3" id="hint-button">
+      <button class="btn btn-primary my-1 me-1 me-sm-2 me-lg-3" id="hint-button">
         <img src="fontawesome/magic.svg" width="20" alt="Hint">
-        Give hint
+        Give hint (<span id="hint-level">1</span>)
+      </button>
+      <button class="btn btn-warning me-1 me-sm-2 me-lg-3" disabled id="share-button">
+        <img src="fontawesome/share-alt.svg" width="20" alt="Share">
+        Share
       </button>
     </section>
 
@@ -124,10 +137,18 @@
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">About Flagwords</h5>
+            <h4 class="modal-title">
+              <span>About WF</span>
+              <img src="twemoji/WF.svg" alt="🇼🇫" width="20"></img>
+              <span>la</span>
+              <img src="twemoji/LA.svg" alt="🇱🇦" width="20"></img>
+              <span>gs</span>
+              <img src="twemoji/GS.svg" alt="🇬🇸" width="20  "></img>
+            </h4>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
+            <h5 class="fst-italic">A game of words and flags</h5>
             <p>A <em>Wordle</em> clone where every word is a combination of ISO 3166-1 Alpha-2 (in other words, every word can be written using flag emojis).</p>
             <img class="d-block mx-auto img-fluid" src="screenshot.png">
             <h5>Features:</h5>
@@ -135,10 +156,10 @@
               <li>Unlimited guesses</li>
               <li>1 word a day</li>
               <li>Hints (in blue) if you&rsquo;re stuck</li>
+              <li>Score sharing after any number of attempts</li>
             </ul>
             <h5>Future features:</h5>
             <ul>
-              <li>Score sharing</li>
               <li>Classic Wordle-type keyboard</li>
             </ul>
             <h5>Credits:</h5>

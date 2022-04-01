@@ -8,6 +8,7 @@ const PAIRS = 3,
 	CLASS_STATUS = [
 		' bg-dark text-light', ' bg-warning text-dark', ' bg-success text-light', ' bg-primary text-light',
 	],
+	SQUARE_STATUS = [ '⬛', '🟨', '🟩', '🟦' ],
 	MAIN_SECTION = document.querySelector('main'),
 	LINE_TEMPLATE = MAIN_SECTION.innerHTML,
 	WORD_LIST = ["RETAIL", "LAVISH", "TALCUM", "CONGER", "LIMPID", "IMPAIR", "SACRUM", "VAGINA", "SNUGLY", "MUSING", "ETCHER", "SEPTUM", "BODEGA", "SICKLY", "TOROID", "PRIMAL", "CORSET", "COCKER", "LINGER", "THATCH", "SCREAM", "DECADE", "CAPSID", "PSEUDO", "TRIODE", "SESAME", "REPAIR", "LIAISE", "INKPAD", "PECKER", "CYSTIC", "RESIST", "METRIC", "ERASER", "GLAZER", "GRUMPY", "PSALMS", "INNING", "NITRIC", "THRUST", "FILIAL", "VIROID", "MAMMAL", "MYTHIC", "MAGPIE", "PLASMA", "TAMELY", "TOILER", "UNDOER", "PACKER", "BENGAL", "HUGGER", "STEAMY", "TOMCAT", "VULVAL", "FINELY", "PEBBLY", "TRICKY", "UNFREE", "TAMPER", "FOSSIL", "TALKER", "KICKER", "MENIAL", "STROKE", "ASSIST", "SERENE", "CAUSAL", "CHEEKY", "SIESTA", "UNMASK", "UNSEAL", "UNDOCK", "SEPTET", "COSTLY", "KISSER", "BAZAAR", "FOLKSY", "BIGAMY", "NOETIC", "BENIGN", "REPEAL", "FINISH", "PRAISE", "STALLS", "CYGNET", "PRIMER", "THUSLY", "RUSHER", "MOUSSE", "BREACH", "UNBOLT", "REVERE", "ASTHMA", "LANCET", "MOSAIC", "CINEMA", "NAPKIN", "SECURE", "ROAMER", "TWITCH", "SNARLY", "MOSTLY", "PLYERS", "GIVING", "BYPASS", "FINGER", "CAESAR", "SHEATH", "THREAT", "BIKINI", "UNCLAD", "SISTER", "CANOPY", "ASSESS", "DOMAIN", "BALSAM", "TALKIE", "VELCRO", "CRUNCH", "YEARLY", "BOVINE", "SANELY", "UNBELT", "CANING", "NOUGHT", "GLIDER", "PLACER", "BONITO", "FRISKY", "AMPERE", "MASSES", "DETAIL", "VENOUS", "SIGNAL", "SKATER", "MASTER", "GRADER", "UNPLUG", "STASIS", "SILICA", "STRUCK", "LAMELY", "PESTER", "ATTACK", "NEARBY", "IMPEDE", "TABLET", "THROAT", "SYRUPY", "DESIRE", "UNSEAT", "COPTIC", "ARMPIT", "VELVET", "CLIMAX", "DETAIN", "ROARER", "CYPRUS", "LINGAM", "EUROPE", "GUITAR", "LITHIC", "CREEPY", "VITALS", "UNEASE", "INVEST", "CANINE", "ASTRAL", "SALIVA", "INCOME", "COITUS", "BREATH", "SAVING", "MANURE", "ERSATZ", "SMUGLY", "PATTER", "VINOUS", "RETAKE", "RESEAT", "CRATER", "SMILER", "ACCUSE", "UNREAL", "CANCER", "NAUGHT", "FOREST", "RUBBER", "SHADES", "STROBE", "RULING", "ARREST", "SLALOM", "LAGUNA", "BECOME", "SOMALI", "CHALKY", "MANGER", "MANILA", "PLIERS", "PASTIS", "GRAMMA", "GUINEA", "STRONG", "SOVIET", "PARSER", "RENEGE", "TRADER", "HUGELY", "MATTER", "LUSTER", "COSINE", "RECAST", "SARONG", "INGEST", "NARWAL", "NOUGAT", "PLINTH", "MOVING", "MEMOIR", "ALPACA", "DEBASE", "STREAM", "FRIDGE", "GHETTO", "BASKET", "RESEAL", "SAGELY", "ISOMER", "DECODE", "CRINGE", "ALCOVE", "HUNGER", "CREEPS", "ARCANE", "TACKER", "SNEAKY", "SHAMMY", "RECOPY", "VENEER", "FRACAS", "GRASSY", "THRONG", "FISCAL", "MAJORS", "NUTMEG", "TAUGHT", "VAINLY", "SLIMLY", "JOKING", "ALUMNA", "MUSKET", "BANISH", "BANANA", "STAIRS", "LIVING", "STAGER", "BAKING", "BOOMER", "GLASSY", "RECODE", "PRUNER", "PERUSE", "GRATER", "FILTER", "SETTER", "GASKET", "FINEST", "FOLIUM", "IDIOCY", "MAKING", "BADGER", "GENOME", "EARWAX", "MERELY", "LINING", "SOUGHT", "MEASLY", "SALTER", "AILING", "SHIRAZ", "CRITIC", "GRIMLY", "PEPSIN", "PAPERS", "ARMLET", "MAILER", "THROES", "BEMUSE", "ROCOCO", "LABIAL", "TATTER", "AWNING", "LUNACY", "SCRUBS", "CHEESY", "MUCOUS", "SILVER", "FILING", "TORERO", "BATHER", "LUSTRE", "SKILLY", "ROCKET", "DOCKER", "UNLIVE", "FISHER", "CRISIS", "CREAMY", "LIBIDO", "CACKLY", "ALBEDO", "JOINER", "YEMENI", "CHILLI", "NEATLY", "TRAUMA", "SIMMER", "ATOMIC", "NONFAT", "PLUNGE", "BEATER", "REGIME", "RESIGN", "UNREAD", "MALIGN", "BEGGAR", "PAMPER", "FREELY", "SHINER", "CRUMMY", "DODGER", "STATUS", "CASEIN", "SODOMY", "VALUER", "FOETID", "STRUNG", "PHARMA", "SNITCH", "PRIEST", "BALTIC", "SALINA", "NANISM", "OMERTA", "MUSEUM", "TRACER", "MUSTER", "AFLAME", "CLUNKY", "VALUES", "PANZER", "BONOBO", "COLUMN", "MANUAL", "THIRST", "SITCOM", "IMMUNE", "SACHET", "SITTER", "PRESTO", "PENCIL", "REVISE", "NAUSEA", "RECOIL", "NAMELY", "DEALER", "SKETCH", "BACKER", "GRISLY", "ADVISE", "DORSUM", "VENULA", "EASING", "PARSEC", "REMAKE", "BRAZIL", "TAKING", "CHROME", "VANISH", "CAMPUS", "JOVIAL", "SEVERE", "LATTER", "INSIDE", "FRAMER", "BASALT", "ADAGIO", "SLEEVE", "CLERIC", "REPEAT", "CHEESE", "COSILY", "STARVE", "DEARLY", "UNVEIL", "CLARET", "AUGUST", "ARCADE", "PACKET", "ROBBER", "GREASE", "TOMATO", "FRESCO", "UNSAID", "BYROAD", "CLUMSY", "SLEUTH", "FRUGAL", "SLATER", "CUBISM", "MASKER", "SKIMPY", "BEARER", "COMPLY", "PASCAL", "LACING", "FRAISE", "CAVIAR", "SCALER", "REALLY", "FIASCO", "RETAIN", "ALLUDE", "MANAGE", "REGRET", "INTAKE", "TOSSER", "MYSTIC", "CYPHER", "SHEARS", "ECLAIR", "VESTAL", "ATTACH", "CHARGE", "SEPTIC", "DEBRIS", "RECUSE", "PAVING", "PAGING", "VIKING", "MONGER", "JOGGER", "STREET", "BETTER", "NUGGET", "UNCASE", "LYCHEE", "CAVEAT", "STICKY", "BREAST", "HUBRIS", "CUTLET", "MEAGER", "CARESS", "CUSTOM", "MUSLIM", "LIMPER", "INMOST", "FIGURE", "CHIRPY", "GLITCH", "DECAMP", "FIESTA", "ATTAIN", "BELUGA", "FIDGET", "NEPALI", "SALINE", "COUSIN", "SEROUS", "PELVIS", "REMOVE", "UNCOIL", "ALLURE", "STINGY", "SLIDER", "GREASY", "CHILLY", "BOILER", "COCAIN", "INLAID", "INSANE", "MOCKER", "SOCIAL", "HUMANE", "GRUNGE", "GRIEVE", "MUSLIN", "SILAGE", "COARSE", "SCUMMY", "SECRET", "DEADLY", "MESCAL", "SINGER", "DOSAGE", "TRAGIC", "LAUNCH", "RUBRIC", "TARSUS", "PRESET", "CONFER", "CITRIC", "REITER", "SEALER", "COMMIT", "COBALT", "ROCKER", "CITRUS", "PROMPT", "SHINTO", "VICUNA", "BLEACH", "CREASE", "FOETAL", "SHARPY", "RUINER", "SLICER", "STINKY", "NEARLY", "THRONE", "UNMADE", "REFINE", "ARNICA", "GENIAL", "CHASER", "UNKEPT", "ALBINO", "UNMAKE", "NAILER", "DECKER", "DORSAL", "BEFORE", "GYPSUM", "GATHER", "DEVISE", "MUTTER", "GNARLY", "GLADLY", "FIBRIL", "RUDELY", "SHARER", "KIMONO", "THINLY", "PREACH", "RENAME", "ITALIC", "RELIVE", "CLASSY", "DOGLEG", "CHUMMY", "DEGREE", "SOCKET", "ARCHER", "LAGGER", "LITMUS", "SIMPLY", "DOCKET", "KELVIN", "PANINI", "CAREER", "DESIST", "REREAD", "INSIST", "REGAIN", "REJOIN", "PLEASE", "KINGLY", "ACIDIC", "BOREAL", "BRUNCH", "LASTLY", "COGNAC", "GUTTER", "REVEAL", "SCALAR", "ACROSS", "ROMPER", "LITTER", "DECIDE", "JESTER", "CLERGY", "BYPATH", "ASSIGN", "UNLIKE", "FRINGE", "MANIAC", "CLINIC", "BIGGER", "PASHTO", "UNPACK", "RESIDE", "NEARER", "DEFINE", "VULVAR", "EUNUCH", "RECIPE", "TASTER", "PEPLUM", "GENIUS", "LIKELY", "LISTER", "LIMPET", "UNPAID", "SLEEPY", "RELISH", "REVAMP", "DESIGN", "SHIMMY", "IDLING", "DEARTH", "NETHER", "BASSET", "CHUNKY", "CLEAVE", "SMIDGE", "UNDONE", "SIGNET", "ACETIC", "SEESAW", "CLAUSE", "PARSEE", "REMAIN", "BLAZER", "SHAGGY", "LUGGER", "GAMELY", "CYCLIC", "CASING", "STEELY", "LINEAR", "PEPTIC", "PELVIC", "UNREST", "SAVAGE", "PLACID", "THINGS", "SOLVER", "BIKERS", "ESCAPE", "DOGGIE", "BRIDAL", "UNLASH", "ROMANI", "TOILET", "LATHER", "STARCH", "ROVING", "LASHER", "UNRULY", "BRIDGE", "VASTLY", "MAINLY", "SOCCER", "BOTHER", "ROSTER", "REVIVE", "MORULA", "NIACIN", "INROAD", "REGGAE", "MAGNET", "INSTAL", "SINGLY", "DECREE", "COSMIC", "FOETUS", "MUGGER", "COUGAR", "VEGGIE", "DENIAL", "CIPHER", "SNATCH", "TRAGUS", "CAMPER", "READER", "AFRESH", "LACUNA", "CREAKY", "CASKET", "EASTER", "DOINGS", "SACRAL", "SEPSIS", "BOTTOM", "ETHNIC", "STATIC", "THREAD", "INVADE", "SORELY", "CONGEE", "FITTER", "MOTHER", "LANCER", "LIVELY", "VACUUM", "CASINO", "DETACH", "GADGET", "SEARCH", "PLATER", "ALMOST", "BRACES", "RUSTIC", "VASSAL", "VESICA", "INSTIL", "VIBRIO", "EASILY", "CUBIST", "FREAKY", "CORONA", "THESIS", "LIKING", "CUTTER", "BARELY", "PACING", "BOUNCY", "MOROSE", "FRILLS", "STRESS", "GINGER", "MASTIC", "MUESLI", "LIGNIN", "PRAXIS", "STITCH", "BOTFLY", "SAMOSA", "STATIN", "SONATA", "CHINTZ", "NUDGER", "THIEVE", "SIGNER", "IMPALA", "CRISPY", "FOSTER", "UNEASY"],
@@ -18,11 +19,11 @@ const PAIRS = 3,
 
 let current_line = -1,
 	current_letter = 0,
-	hint_level = 0;
+	hint_level = 0,
+	score_keeper = [ `WF🇼🇫la🇱🇦gs🇬🇸 #${1+CURRENT_DAY}` ];
 
 function addLine() {
 	current_line++;
-	current_letter = 0;
 	let newline = document.createElement('div');
 	newline.innerHTML = LINE_TEMPLATE.replaceAll('[LINE]', current_line);
 	MAIN_SECTION.appendChild(newline);
@@ -31,6 +32,7 @@ function addLine() {
 			document.getElementById(`pair-${current_line}-${i}`)
 		);
 	}
+	showHints();
 }
 
 function resetRow() {
@@ -94,7 +96,7 @@ function resetLine() {
 	}
 	for (let i = 0; i < PAIRS; i++) {
 		document.getElementById(`flag-${current_line}-${i}`).src = DEFAULT_FLAG;
-		updateTooltip(`pair-${current_line}-${i}`,DEFAULT_FLAG);
+		updateTooltip(`pair-${current_line}-${i}`,DEFAULT_TOOLTIP);
 	}
 	current_letter = 0;
 	resetRow();
@@ -108,20 +110,25 @@ function splitWord(word) {
 	return res;
 }
 
+function showHints() {
+	resetLine();
+	for (let i=0; i<hint_level; i++) {
+		addLetter(WORD_TO_GUESS[i]);
+		document.getElementById(`letter-${current_line}-${i}`).className = BASE_LETTER_CLASS + CLASS_STATUS[3];
+		if (i%2) {
+			document.getElementById(`pair-${current_line}-${Math.floor(i/2)}`).className = BASE_PAIR_CLASS + CLASS_STATUS[3];
+		}
+	}
+	current_letter = hint_level;
+	resetRow();
+}
+
 function giveHint() {
 	document.getElementById('hint-button').blur();
 	if (hint_level < 2*PAIRS) {
 		hint_level++;
-		resetLine();
-		for (let i=0; i<hint_level; i++) {
-			addLetter(WORD_TO_GUESS[i]);
-			document.getElementById(`letter-${current_line}-${i}`).className = BASE_LETTER_CLASS + CLASS_STATUS[3];
-			if (i%2) {
-				document.getElementById(`pair-${current_line}-${Math.floor(i/2)}`).className = BASE_PAIR_CLASS + CLASS_STATUS[3];
-			}
-		}
-		current_letter = hint_level;
-		resetRow();
+		document.getElementById('hint-level').textContent = 1+hint_level;
+		showHints();
 	}
 	if (hint_level >= 2*PAIRS) {
 		document.getElementById('hint-button').disabled = true;
@@ -181,7 +188,19 @@ function checkLine() {
 		document.getElementById(`pair-${current_line}-${i}`).className = BASE_PAIR_CLASS + CLASS_STATUS[pair_statuses[i]];
 	}
 	addLine();
+	score_keeper.push(letter_statuses.map(function(s, i) {
+		return SQUARE_STATUS[s] + (
+			i%2 ? (pair_statuses[(i-1)/2] > 1 ? '🏁' : '🏴')  :''
+		);
+	}).join(''));
+	document.getElementById('share-button').disabled = false;
 	document.getElementById('check-button').disabled = true;
+}
+
+function shareProgress() {
+	navigator.clipboard.writeText(
+		score_keeper.concat('https://raphv.github.io/flaggle/').join('\n')
+		);
 }
 
 document.addEventListener('keyup', function(e) {
@@ -252,6 +271,7 @@ Array.from(document.querySelectorAll('a.flagboard-link')).forEach(function(a) {
 document.getElementById('check-button').addEventListener('click', checkLine);
 document.getElementById('reset-button').addEventListener('click', resetLine);
 document.getElementById('hint-button').addEventListener('click', giveHint);
+document.getElementById('share-button').addEventListener('click', shareProgress);
 
 MAIN_SECTION.innerHTML = '';
 

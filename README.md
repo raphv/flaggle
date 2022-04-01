@@ -1,4 +1,6 @@
-# Flagwords!
+# WF🇼🇫la🇱🇦gs🇬🇸
+
+## *A game of words and flags!*
 
 A Wordle clone where every word is a combination of ISO 3166-1 Alpha-2 (in other words, every word can be written using flag emojis).
 
@@ -9,10 +11,10 @@ A Wordle clone where every word is a combination of ISO 3166-1 Alpha-2 (in other
 - Unlimited guesses
 - 1 word a day
 - Hints (in blue) if you’re stuck
+- Score sharing after any number of attempts
 
 ### Future features:
 
-- Score sharing
 - Classic Wordle-type keyboard
 
 ### Credits:
