@@ -23,9 +23,11 @@ let current_line = -1,
 function addLine() {
 	current_line++;
 	current_letter = 0;
-	MAIN_SECTION.innerHTML += LINE_TEMPLATE.replaceAll('[LINE]', current_line);
+	let newline = document.createElement('div');
+	newline.innerHTML = LINE_TEMPLATE.replaceAll('[LINE]', current_line);
+	MAIN_SECTION.appendChild(newline);
 	for (let i = 0; i < PAIRS; i++) {
-		let tooltip = new bootstrap.Tooltip(
+		new bootstrap.Tooltip(
 			document.getElementById(`pair-${current_line}-${i}`)
 		);
 	}
