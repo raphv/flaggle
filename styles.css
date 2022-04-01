@@ -3,14 +3,19 @@
 }
 
 .flagboard {
-	overflow-x: scroll;
+	overflow-x: auto;
 	overflow-y: hidden;
 }
 
-.flagboard {
-	line-height: 14px;
+.flagboard th {
+	line-height: .8em;
 }
 
 .flagboard td {
-	padding: 0;
+	line-height: 0;
+	padding: 1px;
+}
+
+.flagboard-cell img {
+	width: clamp(28px, 3.7vw, 40px);
 }
