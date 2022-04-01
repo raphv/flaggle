@@ -11,7 +11,7 @@
     <title>Flagwords!</title>
   </head>
   <body>
-    <h1 class="text-center">Flagwords</h1>
+    <h1 class="text-center">Flagwords <a href="#help" data-bs-toggle="modal"><img src="fontawesome/question-circle.svg" alt="Help!" width="40"></a></h1>
     <main>
 
       <div class="d-flex align-items-center justify-content-center my-2 my-lg-3" id="line-[LINE]">
@@ -47,7 +47,7 @@
         <img src="fontawesome/magic.svg" width="20" alt="Hint">
         Give hint
       </button>
-    </div>
+    </section>
 
     <footer class="flagboard mt-4">
       <table class="w-100 text-center">
@@ -2708,7 +2708,39 @@
         </tbody>
       </table>
     </footer>
+
+    <div class="modal fade" id="help" tabindex="-1">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">About Flagwords</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>A <em>Wordle</em> clone where every word is a combination of ISO 3166-1 Alpha-2 (in other words, every word can be written using flag emojis).</p>
+            <img class="d-block mx-auto img-fluid" src="screenshot.png">
+            <h5>Features:</h5>
+            <ul>
+              <li>Unlimited guesses</li>
+              <li>1 word a day</li>
+              <li>Hints (in blue) if you&rsquo;re stuck</li>
+            </ul>
+            <h5>Future features:</h5>
+            <ul>
+              <li>Score sharing</li>
+            </ul>
+            <h5>Credits:</h5>
+            <p>2022 by @RaphV</p>
+            <p>Please provide feedback (improvements, features, words, bugs, etc.) on <a href="https://github.com/raphv/flaggle" target="_blank">GitHub</a>!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="bootstrap/bootstrap.bundle.min.js"></script>
     <script src="game.js"></script>
+    <script>
+      let modal = new bootstrap.Modal(document.getElementById('help')); modal.show();
+    </script>
   </body>
 </html>
