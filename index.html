@@ -12,34 +12,15 @@
   </head>
   <body>
     <h1 class="justify-content-center d-flex lh-1 my-2 my-sm-3 my-lg-4">
-      <span>WF</span>
-      <img class="mx-2" src="twemoji/WF.svg" alt="🇼🇫" width="24"></img>
-      <span>la</span>
-      <img class="mx-2" src="twemoji/LA.svg" alt="🇱🇦" width="24"></img>
-      <span>gs</span>
-      <img class="mx-2" src="twemoji/GS.svg" alt="🇬🇸" width="24"></img>
+      <img class="mx-1" src="twemoji/WF.svg" alt="🇼🇫" width="24"></img>
+      <img class="mx-1" src="twemoji/LA.svg" alt="🇱🇦" width="24"></img>
+      <img class="mx-1" src="twemoji/GS.svg" alt="🇬🇸" width="24"></img>
+      <em>(wf·la·gs)</em>
       <a href="#help" data-bs-toggle="modal">
         <img src="fontawesome/question-circle.svg" alt="Help!" width="40"></a>
       </h1>
-    <main>
 
-      <div class="d-flex align-items-center justify-content-center my-2 my-lg-3" id="line-[LINE]">
-        <div class="d-flex border border-2 border-secondary rounded p-1 p-sm-2 p-lg-3 me-1 me-sm-2 me-lg-3" id="pair-[LINE]-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Type or click on a flag to fill in">
-          <div class="guess-letter px-1 fs-2 lh-1 text-center border border-2 border-secondary rounded me-2" type="text" id="letter-[LINE]-0">_</div>
-          <div class="guess-letter px-1 fs-2 lh-1 text-center border border-2 border-secondary rounded me-2" type="text" id="letter-[LINE]-1">_</div>
-          <img class="guess-flag" src="twemoji/temp.svg" width="36" id="flag-[LINE]-0">
-        </div>
-        <div class="d-flex border border-2 border-secondary rounded p-1 p-sm-2 p-lg-3 me-1 me-sm-2 me-lg-3" id="pair-[LINE]-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Type or click on a flag to fill in">
-          <div class="guess-letter px-1 fs-2 lh-1 text-center border border-2 border-secondary rounded me-2" type="text" id="letter-[LINE]-2">_</div>
-          <div class="guess-letter px-1 fs-2 lh-1 text-center border border-2 border-secondary rounded me-2" type="text" id="letter-[LINE]-3">_</div>
-          <img class="guess-flag" src="twemoji/temp.svg" width="36" id="flag-[LINE]-1">
-        </div>
-        <div class="d-flex border border-2 border-secondary rounded p-1 p-sm-2 p-lg-3 me-1 me-sm-2 me-lg-3" id="pair-[LINE]-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Type or click on a flag to fill in">
-          <div class="guess-letter px-1 fs-2 lh-1 text-center border border-2 border-secondary rounded me-2" type="text" id="letter-[LINE]-4">_</div>
-          <div class="guess-letter px-1 fs-2 lh-1 text-center border border-2 border-secondary rounded me-2" type="text" id="letter-[LINE]-5">_</div>
-          <img class="guess-flag" src="twemoji/temp.svg" width="36" id="flag-[LINE]-2">
-        </div>
-      </div>
+    <main>
 
     </main>
 
@@ -77,7 +58,7 @@
       <div class="tab-content">
       <div class="tab-pane show active fade w-100" id="flagboard">
       <div class="flagboard">
-      <table class="text-center">
+      <table class="text-center w-100">
         <thead>
           <tr>
             <th></th>
@@ -193,22 +174,22 @@
           <div class="modal-header">
             <h4 class="modal-title">
               <span>About WF</span>
-              <img src="twemoji/WF.svg" alt="🇼🇫" width="20"></img>
-              <span>la</span>
-              <img src="twemoji/LA.svg" alt="🇱🇦" width="20"></img>
-              <span>gs</span>
-              <img src="twemoji/GS.svg" alt="🇬🇸" width="20  "></img>
+              <img class="mx-1" src="twemoji/WF.svg" alt="🇼🇫" width="20"></img>
+              <img class="mx-1" src="twemoji/LA.svg" alt="🇱🇦" width="20"></img>
+              <img class="mx-1" src="twemoji/GS.svg" alt="🇬🇸" width="20"></img>
+              <em>(wf·la·gs)</em>
             </h4>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <h5 class="fst-italic">A game of words and flags</h5>
             <p>A <em>Wordle</em> clone where every word is a combination of ISO 3166-1 Alpha-2 (in other words, every word can be written using flag emojis).</p>
+            <h6>Example: Guess the word “cheese”:</h6>
             <img class="d-block mx-auto img-fluid" src="screenshot.png">
             <h5>Features:</h5>
             <ul>
               <li>Unlimited guesses</li>
-              <li>A new random word each time (out of a list of 900+ words)</li>
+              <li>A new random word each time (out of a list of 900+ words</li>
               <li>Choose a flag or click letters</li>
               <li>Hints (in blue) if you&rsquo;re stuck</li>
             </ul>
@@ -233,6 +214,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
+            <div id="result-preview"></div>
             <p>Refresh this page to start again with a new word!</p>
             <p class="text-center">
               <button class="btn btn-lg btn-warning me-1 me-sm-2 me-lg-3" id="share-button" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="click" title="Copied to clipboard">
