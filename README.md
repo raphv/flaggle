@@ -1,4 +1,4 @@
-# WF🇼🇫la🇱🇦gs🇬🇸
+# 🇵🇭🇱🇦🇬🇱(ph·la·gl)
 
 ## *A game of words and flags!*
 
@@ -13,6 +13,10 @@ A Wordle clone where every word is a combination of ISO 3166-1 Alpha-2 (in other
 - Choose a flag or click letters
 - Hints (in blue) if you’re stuck
 - Share your score on social media
+
+### Why not Flaggle?
+
+Flaggle is already used by more than one game, and it can't be written with flags.
 
 ### Credits:
 

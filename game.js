@@ -17,7 +17,7 @@ const PAIRS = 3,
 let current_line = -1,
 	current_letter = 0,
 	hint_level = 0,
-	score_keeper = [ `I found the word “${wordToEmojis(WORD_TO_GUESS)}” on WFlags` ];
+	score_keeper = [ `I guessed “${wordToEmojis(WORD_TO_GUESS)}” on 🇵🇭🇱🇦🇬🇱(ph·la·gl)` ];
 
 function letterToEmojiChar(letter) {
 	return String.fromCodePoint(0x1f1e6+letter.charCodeAt(0)-65);
