@@ -1,4 +1,4 @@
-# 🇵🇭🇱🇦🇬🇱(ph·la·gl)
+# 🇵🇭🇱🇦🇬🇱 (ph·la·gl)
 
 <https://raphv.github.io/flaggle>
 
