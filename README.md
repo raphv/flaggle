@@ -1,5 +1,7 @@
 # 🇵🇭🇱🇦🇬🇱(ph·la·gl)
 
+<https://raphv.github.io/flaggle>
+
 ## *A game of words and flags!*
 
 A Wordle clone where every word is a combination of ISO 3166-1 Alpha-2 (in other words, every word can be written using flag emojis).
