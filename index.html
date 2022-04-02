@@ -54,11 +54,7 @@
       </button>
       <button class="btn btn-primary my-1 me-1 me-sm-2 me-lg-3" id="hint-button">
         <img src="fontawesome/magic.svg" width="20" alt="Hint">
-        Give hint (<span id="hint-level">1</span>)
-      </button>
-      <button class="btn btn-warning me-1 me-sm-2 me-lg-3" disabled id="share-button">
-        <img src="fontawesome/share-alt.svg" width="20" alt="Share">
-        Share
+        Give hint <em id="hint-level">(1/6)</em>
       </button>
     </section>
 
@@ -212,13 +208,9 @@
             <h5>Features:</h5>
             <ul>
               <li>Unlimited guesses</li>
-              <li>1 word a day</li>
+              <li>A new random word each time (out of a list of 900+ words)</li>
+              <li>Choose a flag or click letters</li>
               <li>Hints (in blue) if you&rsquo;re stuck</li>
-              <li>Score sharing after any number of attempts</li>
-            </ul>
-            <h5>Future features:</h5>
-            <ul>
-              <li>Classic Wordle-type keyboard</li>
             </ul>
             <h5>Credits:</h5>
             <ul>
@@ -232,23 +224,30 @@
         </div>
       </div>
     </div>
-<div class="toast-container position-absolute top-0 end-0 p-3">
-  <div class="toast" id="copy-toast" data-bs-delay="2000">
-    <div class="toast-header">
-      <strong class="me-auto">Progress copied!</strong>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+
+    <div class="modal fade" id="success" tabindex="-1">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Congratulations!</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Refresh this page to start again with a new word!</p>
+            <p class="text-center">
+              <button class="btn btn-lg btn-warning me-1 me-sm-2 me-lg-3" id="share-button" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-trigger="click" title="Copied to clipboard">
+                <img src="fontawesome/share-alt.svg" width="20" alt="Share">
+                Share this game
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="toast-body">
-      <p>The status of your WFlags game has been copied to the clipboard.</p>
-      <p>Feel free to share on social media.</p>
-    </div>
-  </div>
-</div>
 
     <script src="bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script src="words.js"></script>
     <script src="game.js"></script>
-    <script>
-      let modal = new bootstrap.Modal(document.getElementById('help')); modal.show();
-    </script>
   </body>
 </html>

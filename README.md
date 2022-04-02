@@ -9,13 +9,10 @@ A Wordle clone where every word is a combination of ISO 3166-1 Alpha-2 (in other
 ### Features:
 
 - Unlimited guesses
-- 1 word a day
+- A new random word each time (out of a list of 900+ words)</li>
+- Choose a flag or click letters
 - Hints (in blue) if you’re stuck
-- Score sharing after any number of attempts
-
-### Future features:
-
-- Classic Wordle-type keyboard
+- Share your score on social media
 
 ### Credits:
 
