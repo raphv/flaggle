@@ -1,6 +1,6 @@
 # 🇵🇭🇱🇦🇬🇱 (ph·la·gl)
 
-<raphv.github.io/🇵🇭🇱🇦🇬🇱>
+[raphv.github.io/🇵🇭🇱🇦🇬🇱](https://raphv.github.io/🇵🇭🇱🇦🇬🇱)
 
 ## *A game of words and flags!*
 
