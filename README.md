@@ -1,6 +1,6 @@
 # 🇵🇭🇱🇦🇬🇱 (ph·la·gl)
 
-<https://raphv.github.io/flaggle>
+<raphv.github.io/🇵🇭🇱🇦🇬🇱>
 
 ## *A game of words and flags!*
 
