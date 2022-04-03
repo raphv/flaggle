@@ -17,7 +17,7 @@ const PAIRS = 3,
 let current_line = -1,
 	current_letter = 0,
 	hint_level = 0,
-	score_keeper = [ `I guessed “${wordToEmojis(WORD_TO_GUESS)}” on 🇵🇭🇱🇦🇬🇱(ph·la·gl)` ];
+	score_keeper = [ `I guessed “${wordToEmojis(WORD_TO_GUESS)}” on 🇵🇭🇱🇦🇬🇱` ];
 
 function letterToEmojiChar(letter) {
 	return String.fromCodePoint(0x1f1e6+letter.charCodeAt(0)-65);
@@ -228,7 +228,7 @@ function checkLine() {
 
 function shareGame() {
 	navigator.clipboard.writeText(
-		score_keeper.concat('raphv.github.io/🇵🇭🇱🇦🇬🇱/').join('\n')
+		score_keeper.concat('raphv.github.io/phlagl/').join('\n')
 		);
 	(new bootstrap.Tooltip(document.getElementById('share-button'))).show();
 }
