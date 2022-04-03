@@ -228,7 +228,7 @@ function checkLine() {
 
 function shareGame() {
 	navigator.clipboard.writeText(
-		score_keeper.concat('https://raphv.github.io/flaggle/').join('\n')
+		score_keeper.concat('raphv.github.io/🇵🇭🇱🇦🇬🇱/').join('\n')
 		);
 	(new bootstrap.Tooltip(document.getElementById('share-button'))).show();
 }
